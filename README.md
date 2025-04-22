@@ -4,7 +4,7 @@
 ![api](https://img.shields.io/badge/pocketmine-5.0-informational)
 
 This is a plugin **example**, of how to use the [Replay](https://github.com/J1b1x/Replay) library.
-## NOTEs
+## NOTE
 
 This is just an EXAMPLE plugin, of how you can use the Replay API, it's not really supposed to be a "feature rich" plugin (even though it is). 
 
