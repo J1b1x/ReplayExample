@@ -8,4 +8,10 @@ projects:
     libs:
       - src: J1b1x/Replay/Replay
         version: ^0.0.1
+      - src: J1b1x/AsyncMedoo/AsyncMedoo
+        version: ^0.0.1
+      - src: J1b1x/Forms/Forms
+        version: ^0.0.1
+      - src: J1b1x/FunctionalItem/FunctionalItem
+        version: ^0.0.1
 ...
