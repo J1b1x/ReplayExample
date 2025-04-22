@@ -6,6 +6,6 @@ projects:
   ReplayExample:
     path: ""
     libs:
-      - src: J1b1x/Replay/replay/replayer/ReplayHandler
+      - src: J1b1x/Replay/ReplayHandler
         version: ^0.0.1
 ...
