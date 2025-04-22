@@ -1,0 +1,20 @@
+{
+  "name": "jibix/replay-example",
+  "minimum-stability": "dev",
+  "autoload": {
+    "psr-4": {
+      "Jibix\\ReplayExample\\": "src/"
+    }
+  },
+  "authors": [
+    {
+      "name": "Jibix"
+    }
+  ],
+  "require": {
+    "jibix/replay": "dev-master",
+    "j1b1x/functionalitem": "dev-master",
+    "j1b1x/forms": "dev-main",
+    "hadesnetwork/commando": "dev-pm5"
+  }
+}

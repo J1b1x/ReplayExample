@@ -1,0 +1,19 @@
+server-type: replay #replay or record
+
+provider: mysql #mysql or json
+mysql-credentials: #only required if you're using the mysql provider
+  database: "hades"
+  user: "root"
+  password: "myPassw0rd"
+  address: 127.0.0.1
+  port: 3306
+json-path: "" #if you're using this plugin on a server NETWORK you can add a custom path, where the replays get saved if you're using the json provider. if empty it just used plugin_data\ReplayExample\replays.json
+
+replay-id-length: 6
+
+#you can find them here: https://github.com/pmmp/BedrockProtocol/blob/master/src/types/LevelEvent.php
+unreversable-level-event-ids: [
+  2001
+  3600
+  3601
+]
