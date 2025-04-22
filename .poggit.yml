@@ -7,5 +7,5 @@ projects:
     path: ""
     libs:
       - src: J1b1x/Replay/Replay
-        version: ^0.0.1
+        version: ^0.0.2
 ...
