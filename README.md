@@ -10,7 +10,7 @@ This is just an EXAMPLE plugin, of how you can use the Replay API, it's not real
 
 ### Functionality
 You can either use this plugin as recorder or as a replayer.
-Just configure it in the [config.yml]().
+Just configure it in the [config.yml](https://github.com/J1b1x/ReplayExample/blob/main/resources/config.yml).
 
 #### Recording
 If you're using this plugin for recording, you need to use the ```/record``` command.
