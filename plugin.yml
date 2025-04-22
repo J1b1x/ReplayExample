@@ -1,5 +1,5 @@
 name: "Repligga"
-version: 1.0
+version: 1.0.0
 api: 5.0.0
 author: "Jibix"
 main: Jibix\ReplayExample\Main
