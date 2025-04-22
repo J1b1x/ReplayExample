@@ -70,6 +70,7 @@ class ReplaySession{
     }
 
     public function setReplay(?Replay $replay): void{
+        $this->replay = $replay;
         if ($replay !== null) {
             //TODO: Boss bar?
             $this->player->setGamemode(GameMode::SURVIVAL());
@@ -89,7 +90,6 @@ class ReplaySession{
         } elseif ($this->replay !== null) {
             $this->setup();
         }
-        $this->replay = $replay;
     }
 
     public function setReplayItem(Item ...$items): void{
