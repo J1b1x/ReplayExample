@@ -12,7 +12,7 @@
     }
   ],
   "require": {
-    "jibix/replay": "dev-master",
+    "jibix/replay": "dev-main",
     "j1b1x/functionalitem": "dev-master",
     "j1b1x/forms": "dev-main",
     "hadesnetwork/commando": "dev-pm5"
