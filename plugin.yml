@@ -1,18 +1,18 @@
-name: "Repligga"
+name: "GameReplay"
 version: 1.0.0
 api: 5.0.0
 author: "Jibix"
 main: Jibix\ReplayExample\Main
 permissions:
-  replay.command:
+  gamereplay.command:
     default: op
-  replay.command.record:
+  gamereplay.command.record:
     default: op
-  replay.command.stop:
+  gamereplay.command.stop:
     default: op
-  replay.command.world:
+  gamereplay.command.world:
     default: op
-  replay.search:
+  gamereplay.search:
     default: op
-  replay.delete:
+  gamereplay.delete:
     default: op
