@@ -15,13 +15,13 @@ Just configure it in the [config.yml](https://github.com/J1b1x/ReplayExample/blo
 #### Recording
 If you're using this plugin for recording, you need to use the ```/record``` command.
 
-- ``/record`` | _replay.command_
-- ``/record record [game-name] [identifier-length]`` | _replay.command.record_
-- ``/record stop`` | _replay.command.stop_
-- ``/record world <world> [teleport-players]`` | _replay.command.world_
+- ``/record`` | _gamereplay.command_
+- ``/record record [game-name] [identifier-length]`` | _gamereplay.command.record_
+- ``/record stop`` | _gamereplay.command.stop_
+- ``/record world <world> [teleport-players]`` | _gamereplay.command.world_
 
 #### Replaying
 Well, replaying is actually pretty simple. Just join the server and click on the compass.
 
-If you have the permission ``replay.search``, you can also watch replays of other people, if you have their replay's ID. Just press the ``Search Replay`` button and put in the replay ID.
-Only people with the ``replay.delete`` permission can delete replays.
+If you have the permission ``gamereplay.search``, you can also watch replays of other people, if you have their replay's ID. Just press the ``Search Replay`` button and put in the replay ID.
+Only people with the ``gamereplay.delete`` permission can delete replays.
