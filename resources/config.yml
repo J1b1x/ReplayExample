@@ -15,6 +15,5 @@ replay-id-length: 6
 unreversable-level-event-ids: [
   2001
   3600
-  3601,
-  9800
+  3601
 ]
