@@ -48,7 +48,6 @@ class ReplaySession{
         $this->player->getInventory()->clearAll();
         $this->setReplayItem(ReplaySelectorItem::get($this->player));
         $this->player->setGamemode(GameMode::ADVENTURE);
-        //$this->getAttachment(UtilitiesAttachment::class)->basicInit(GameMode::ADVENTURE(), 6);
         $this->player->teleport(Server::getInstance()->getWorldManager()->getDefaultWorld()->getSafeSpawn());
         $this->player->getInventory()->setHeldItemIndex(4);
     }
