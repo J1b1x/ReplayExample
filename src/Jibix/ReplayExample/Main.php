@@ -8,6 +8,7 @@
 namespace Jibix\ReplayExample;
 use Jibix\AsyncMedoo\AsyncMedoo;
 use Jibix\AsyncMedoo\MySQLCredentials;
+use Jibix\Forms\Forms;
 use Jibix\FunctionalItem\FunctionalItemManager;
 use Jibix\Replay\listener\replay\ReplayListener;
 use Jibix\Replay\provider\type\JsonProvider;
@@ -43,6 +44,7 @@ class Main extends PluginBase{
         self::setInstance($this);
         $this->saveDefaultConfig();
         $data = $this->getConfig()->getAll();
+        Forms::register($this);
         AsyncMedoo::initialize(MySQLCredentials::fromArray($data['mysql-credentials'] ?? []));
         $this->settings = new ReplaySettings(
             $this,
