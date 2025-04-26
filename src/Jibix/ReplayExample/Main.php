@@ -44,7 +44,6 @@ class Main extends PluginBase{
         self::setInstance($this);
         $this->saveDefaultConfig();
         $data = $this->getConfig()->getAll();
-        Forms::register($this);
         AsyncMedoo::initialize(MySQLCredentials::fromArray($data['mysql-credentials'] ?? []));
         $this->settings = new ReplaySettings(
             $this,
@@ -75,6 +74,7 @@ class Main extends PluginBase{
                 new SpeedItem(),
                 new QuitReplayItem()
             );
+            Forms::register($this);
         } else {
             $this->getServer()->getLogger()->notice("Using the replay system in§b record§r mode");
             $this->getServer()->getCommandMap()->register($this->getName(), new ReplayCommand($this, "replay"));
