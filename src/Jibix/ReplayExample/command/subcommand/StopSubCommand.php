@@ -7,25 +7,24 @@
  */
 namespace Jibix\ReplayExample\command\subcommand;
 use CortexPE\Commando\BaseSubCommand;
-use Jibix\Replay\replay\data\ReplayInformation;
-use Jibix\Replay\replay\recorder\RecordHandler;
-use Jibix\Replay\util\Utils;
+use Jibix\ReplayExample\libs\Jibix\Replay\replay\data\ReplayInformation;
+use Jibix\ReplayExample\libs\Jibix\Replay\replay\recorder\RecordHandler;
+use Jibix\ReplayExample\libs\Jibix\Replay\util\Utils;
 use pocketmine\command\CommandSender;
 
+class StopSubCommand extends BaseSubCommand {
 
-class StopSubCommand extends BaseSubCommand{
-
-    protected function prepare(): void{
-        $this->setPermission("replay.command.stop");
+    protected function prepare(): void {
+        $this->setPermission("gamereplay.command.stop");
     }
 
-    public function onRun(CommandSender $sender, string $aliasUsed, array $args): void{
+    public function onRun(CommandSender $sender, string $aliasUsed, array $args): void {
         if (!RecordHandler::getInstance()->getRecorder($world = $sender->getWorld())) {
             $sender->sendMessage("§cYou're currently not in a recording world!");
             return;
         }
         $sender->sendMessage("§aSaving replay...");
-        RecordHandler::getInstance()->stopRecording($world, function (ReplayInformation $information) use ($sender): void{
+        RecordHandler::getInstance()->stopRecording($world, function (ReplayInformation $information) use ($sender): void {
             $sender->sendMessage(
                 "§8-------§aSaved replay§8-------\n" .
                 "§bIdentifier:§6 {$information->getIdentifier()}\n" .
@@ -35,5 +34,9 @@ class StopSubCommand extends BaseSubCommand{
                 "§8---------------------------"
             );
         });
+    }
+
+    public function getPermission(): ?string {
+        return "gamereplay.command.stop";
     }
 }
