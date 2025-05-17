@@ -13,12 +13,12 @@ You can either use this plugin as recorder or as a replayer.
 Just configure it in the [config.yml](https://github.com/J1b1x/ReplayExample/blob/main/resources/config.yml).
 
 #### Recording
-If you're using this plugin for recording, you need to use the ```/record``` command.
+If you're using this plugin for recording, you need to use the ```/replay``` command.
 
-- ``/record`` | _gamereplay.command_
-- ``/record record [game-name] [identifier-length]`` | _gamereplay.command.record_
-- ``/record stop`` | _gamereplay.command.stop_
-- ``/record world <world> [teleport-players]`` | _gamereplay.command.world_
+- ``/replay`` | _gamereplay.command_
+- ``/replay record [game-name] [identifier-length]`` | _gamereplay.command.record_
+- ``/replay stop`` | _gamereplay.command.stop_
+- ``/replay world <world> [teleport-players]`` | _gamereplay.command.world_
 
 #### Replaying
 Well, replaying is actually pretty simple. Just join the server and click on the compass.
