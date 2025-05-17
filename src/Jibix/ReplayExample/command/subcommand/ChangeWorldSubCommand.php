@@ -9,20 +9,19 @@ namespace Jibix\ReplayExample\command\subcommand;
 use CortexPE\Commando\args\BooleanArgument;
 use CortexPE\Commando\args\RawStringArgument;
 use CortexPE\Commando\BaseSubCommand;
-use Jibix\Replay\replay\recorder\RecordHandler;
+use Jibix\ReplayExample\libs\Jibix\Replay\replay\recorder\RecordHandler;
 use pocketmine\command\CommandSender;
 use pocketmine\player\Player;
 
+class ChangeWorldSubCommand extends BaseSubCommand {
 
-class ChangeWorldSubCommand extends BaseSubCommand{
-
-    protected function prepare(): void{
-        $this->setPermission("replay.command.world");
+    protected function prepare(): void {
+        $this->setPermission("gamereplay.command.world");
         $this->registerArgument(0, new RawStringArgument("world", false));
         $this->registerArgument(1, new BooleanArgument("teleport-players", true));
     }
 
-    public function onRun(CommandSender $sender, string $aliasUsed, array $args): void{
+    public function onRun(CommandSender $sender, string $aliasUsed, array $args): void {
         if (!$recorder = RecordHandler::getInstance()->getRecorder($currentWorld = $sender->getWorld())) {
             $sender->sendMessage("§cYou're currently not in a recording world!");
             return;
@@ -45,5 +44,9 @@ class ChangeWorldSubCommand extends BaseSubCommand{
             }
         }
         $sender->sendMessage("§aYou have successfully changed the recording world from§b {$currentWorld->getDisplayName()}§a to§6 {$world->getDisplayName()}§a!");
+    }
+
+    public function getPermission(): ?string {
+        return "gamereplay.command.world";
     }
 }
