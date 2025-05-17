@@ -1,6 +1,6 @@
-server-type: replay #replay or record
+server-type: record #replay or record
 
-provider: mysql #mysql or json
+provider: json #mysql or json
 mysql-credentials: #only required if you're using the mysql provider
   database: "hades"
   user: "root"
