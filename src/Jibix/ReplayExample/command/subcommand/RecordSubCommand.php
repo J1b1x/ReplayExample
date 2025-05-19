@@ -25,7 +25,7 @@ class RecordSubCommand extends BaseSubCommand{
     private const MAX_GAME_NAME_LENGTH = 20;
 
     protected function prepare(): void{
-        $this->setPermission("replay.command.record");
+        $this->setPermission("gamereplay.command.record");
         $this->registerArgument(0, new RawStringArgument("game-name", true));
         $this->registerArgument(1, new IntegerArgument("identifier-length", true));
     }
