@@ -23,7 +23,7 @@ class ReplayCommand extends BaseCommand{
     }
 
     protected function prepare(): void{
-        $this->setPermission("replay.command");
+        $this->setPermission("gamereplay.command");
         $this->addConstraint(new InGameRequiredConstraint($this));
         $this->registerSubCommand(new RecordSubCommand("record"));
         $this->registerSubCommand(new StopSubCommand("stop"));
