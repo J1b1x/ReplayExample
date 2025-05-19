@@ -16,7 +16,7 @@ use pocketmine\command\CommandSender;
 class StopSubCommand extends BaseSubCommand{
 
     protected function prepare(): void{
-        $this->setPermission("replay.command.stop");
+        $this->setPermission("gamereplay.command.stop");
     }
 
     public function onRun(CommandSender $sender, string $aliasUsed, array $args): void{
