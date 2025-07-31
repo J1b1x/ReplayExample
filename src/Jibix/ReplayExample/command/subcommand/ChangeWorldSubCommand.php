@@ -17,7 +17,7 @@ use pocketmine\player\Player;
 class ChangeWorldSubCommand extends BaseSubCommand{
 
     protected function prepare(): void{
-        $this->setPermission("replay.command.world");
+        $this->setPermission("gamereplay.command.world");
         $this->registerArgument(0, new RawStringArgument("world", false));
         $this->registerArgument(1, new BooleanArgument("teleport-players", true));
     }
