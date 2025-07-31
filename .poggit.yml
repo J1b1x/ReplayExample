@@ -16,4 +16,5 @@ projects:
         version: ^0.0.1
       - src: J1b1x/Medoo/Medoo
         version: ^0.0.1
+      - src: HadesNetwork/Commando/Commando
 ...
