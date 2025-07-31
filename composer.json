@@ -16,5 +16,11 @@
     "j1b1x/functionalitem": "dev-master",
     "j1b1x/forms": "dev-main",
     "latampmdevs/commando": "dev-pm5"
-  }
+  },
+  "repositories": [
+    {
+      "type": "vcs",
+      "url": "https://github.com/LatamPMDevs/Commando.git"
+    }
+  ]
 }
