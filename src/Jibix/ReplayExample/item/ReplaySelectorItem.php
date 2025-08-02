@@ -36,7 +36,7 @@ class ReplaySelectorItem extends ReplayItem{
     }
 
     public function onUse(Player $player, ?Vector3 $useVector = null): bool{
-        if ($player->hasPermission("replay.search")) {
+        if ($player->hasPermission("gamereplay.search")) {
             $player->sendForm(new MenuForm("Replays", "", [
                 new Button("§bSearch replay", fn (Player $player) => $player->sendForm($this->getReplaySearchForm()), Image::path("textures/ui/magnifyingGlass")),
                 new Button("§bYour replays", fn (Player $player) => $player->sendForm($this->getPlayerReplaysForm($player)), Image::path("textures/ui/camera-small")),
@@ -64,7 +64,7 @@ class ReplaySelectorItem extends ReplayItem{
 
     private function manageReplayForm(Player $player, ReplayInformation $information): MenuForm{
         $buttons = [new Button("§aPlay", fn (Player $player) => Replay::play(Main::getInstance()->getSettings(), $player, $information), Image::path("textures/ui/icon_trailer"))];
-        if ($player->hasPermission("replay.delete")) $buttons[] = new Button("§cDelete", function (Player $player) use ($information): void{
+        if ($player->hasPermission("gamereplay.delete")) $buttons[] = new Button("§cDelete", function (Player $player) use ($information): void{
             Main::getInstance()->getSettings()->getProvider()->deleteReplay(
                 $identifier = $information->getIdentifier(),
                 fn () => $player->sendForm($this->getPlayerReplaysForm($player, "§aYou have successfully deleted the replay§6 {$identifier}§a!"))

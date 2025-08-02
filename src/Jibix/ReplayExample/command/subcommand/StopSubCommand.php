@@ -25,13 +25,14 @@ class StopSubCommand extends BaseSubCommand{
             return;
         }
         $sender->sendMessage("§aSaving replay...");
-        RecordHandler::getInstance()->stopRecording($world, function (ReplayInformation $information) use ($sender): void{
+        RecordHandler::getInstance()->stopRecording($world, function (ReplayInformation $information, float $size) use ($sender): void{
             $sender->sendMessage(
                 "§8-------§aSaved replay§8-------\n" .
                 "§bIdentifier:§6 {$information->getIdentifier()}\n" .
                 "§bDuration:§6 " . Utils::formatReplayDuration(intval($information->getDuration() / 20)) . "\n" .
                 "§bTimestamp:§6 " . $information->getTimestamp()->format("H:i:s Y.m.d") . "\n" .
                 "§bGame Details:§6 " . $information->getGameDetails() . "\n" .
+                "§bEstimated Replay Size:§6 ~" . $size . "mb\n" .
                 "§8---------------------------"
             );
         });
